@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="index.css"> <!-- Link to your CSS file -->
+	<link rel="icon" href="./images/icon.jpeg">
+	
+	<style>
+        body{
+            align-item: center;
+			margin: 0 auto;
+            margin-top: 20px;
+			justify-contents: stretch;
+        }
+		
+		.product-container {
+            align-items: center;
+			margin: 0 auto;
+			justify-contents: space-evenly;
+            margin-top: 20px;
+        }
+
+        .left, .right {
+		    align-items: center;
+			margin: 0 auto;
+	        justify-contents: space-between;
+            width: 45%;
+			padding: 10;
+        }
+		
+		.cen{
+		    display: flex;
+		    align-items: center;
+			justify-contents: space-around;
+			margin: 0 auto;
+            width: 45%;
+        }
+
+        img {
+		    display: block;
+		    margin: 0 auto;
+			place-items: center;
+			align-item: center;
+            justify-content: space-evenly;
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+        }
+
+        .description {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+    </style>
+	
+</head>
+<body>
+    <div class="product-container">
+	    <img id="product-image" src="" alt="Product Image">
+		<div class="cen">
+		<div class="left">
+		    <h2 id="product-name"></h2>
+            <p id="product-price"></p>
+			<button id="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="right">
+            <p class="description" id="product-description"></p>
+            <div id="specifications"></div>
+            <div id="stock"></div>
+            <div id="reviews"></div>
+        </div>
+		</div>
+        
+    </div>
+
+    <script src="product.js"></script> <!-- Link to your product data file -->
+    <script src="product-detail.js"></script> <!-- Link to your JS for displaying details -->
+</body>
+</html>
+
+       

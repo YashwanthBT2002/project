@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+	    
+	    Enhanced E-Commerce Platform
+	</title>
+
+    <link rel="stylesheet" href="index.css">
+	<link rel="icon" href="./images/icon.jpeg">
+	
+	<style>
+	    .icon{
+		    height: 40px;
+            width: 50; 
+            max-width: 100%;
+		}
+	</style>
+	
+</head>
+<body>
+
+    <header>
+	    
+        <h1>
+		    <a href="userlogin.html">
+			    <img src="./images/logo.jpeg" class= "icon" >
+			</a>
+		    My E-Commerce Store
+		</h1>
+
+        <div class="cart">
+            <button id="cart-button" onclick="toggleCart()">Cart (<span id="cart-count">0</span>)></button>
+        </div>
+    </header>
+
+    <main>
+
+        <input type="text" id="search" placeholder="Search products..." oninput="searchProducts()">
+
+        <div class="filters">
+
+            <button onclick="filterProducts('all')">All</button>
+            <button onclick="filterProducts('under-30')">Under ₹30</button>
+            <button onclick="filterProducts('30-50')">₹30 - ₹50</button>
+            <button onclick="filterProducts('above-50')">above ₹50</button>
+
+        </div>
+
+        <div class="product-list" id="product-list">
+            <!-- Products will be dynamically added here -->
+        </div>
+
+        <div id="cart-modal" class="modal">
+
+            <div class="modal-content">
+
+                <span class="close" onclick="toggleCart()">&times;</span>
+
+                <h2>Your Cart</h2>
+
+                <div id="cart-items"></div>
+
+                <button onclick="checkout()">Checkout</button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Our E-Commerce Store</p>
+    </footer>
+
+    <script src="index.js"></script>
+    
+</body>
+</html>
